@@ -1,6 +1,6 @@
 module.exports = {
     '@tags': ['google'],
-    '@disabled': true,
+    '@disabled': false,
     'Google advanced search: Elon Musk'(browser) {
         const mainQuery = 'Elon Musk';
         
@@ -25,7 +25,6 @@ module.exports = {
         browser.assert.visible(resultsPageQuerySelector, 'UI: Elon Musk is set in the query input');
         browser.assert.containsText(resultsPageLanguageSelector, 'Search Italian pages', 'UI: Language is set to Italian');
         browser.assert.containsText(resultsPagelastUpdateSelector, 'Past month', 'UI: Last update is set to Past Month');
-        
         browser.saveScreenshot('tests_output/google.png');
     }
 };
