@@ -3,7 +3,7 @@ module.exports = {
     'Google advanced search: Elon Musk' (browser) {
         const mainQuery = 'Elon Musk';
         const page = browser.page.googleAdvancedSearch();
-        const resultsPageQuerySelector = `#searchform input[name="q"][value="${mainQuery}"]`
+        const resultsPageQuerySelector = `#searchform input[name="q"][value="${mainQuery}"]`;
 
         page
             .navigate()
@@ -13,7 +13,7 @@ module.exports = {
         browser
             .assert.urlContains('as_q=Elon+Musk', 'Params: Query is Elon Musk')
             .assert.urlContains('lr=lang_it', 'Params: Language is italian')
-            .saveScreenshot('test_output/google2.png')
-        browser.expect.element(resultsPageQuerySelector).to.be.visible
+            .saveScreenshot('test_output/google2.png');
+        browser.expect.element(resultsPageQuerySelector).to.be.visible;
     }
-}
+};
