@@ -11,8 +11,10 @@ module.exports = {
             .selectFilter('@languageDropdown', 'lang_it')
             .selectFilter('@lastUpdateDropdown', 'm')
             .search();
+
         
         browser
+            .click('.sc-bdVaJa ifeHxY')
             .assert.urlContains('as_q=Elon+Musk', 'Params: Query is Elon Musk')
             .assert.urlContains('lr=lang_it', 'Params: Language is Italian')
             .assert.urlContains('as_qdr=m', 'Params: Time period is last month');
