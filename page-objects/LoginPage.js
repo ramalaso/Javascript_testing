@@ -6,9 +6,9 @@ module.exports = {
         btnLogin: '#login',
     },
     commands: [{
-        setQuery(value) {
+        setTxtValue(selector, value) {
             return this
-                .setValue('@mainQueryInput', value);
+                .setValue(selector, value);
         },
         logIn() {
             return this

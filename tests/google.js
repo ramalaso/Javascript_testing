@@ -5,7 +5,6 @@ module.exports = {
         const mainQuery = 'Elon Musk';
         
         const page = browser.page.googleAdvancedSearch();
-
         page
             .navigate()
             .setQuery(mainQuery)
