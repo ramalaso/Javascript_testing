@@ -20,6 +20,8 @@ module.exports = {
             },
             'desiredCapabilities': {
                 'browserName': 'chrome',
+                'javascriptEnabled': true,
+                'acceptSslCerts': true,
                 'chromeOptions': {
                     // 'args': ['--headless']
                 }

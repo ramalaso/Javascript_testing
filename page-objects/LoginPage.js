@@ -5,8 +5,6 @@ module.exports = {
         txtPassword: '#password',
         btnLogin: '#login',
         btnGoogle: '#googleButton',
-        txtGoogleUserName: '#identifierId',
-        txtGooglePassword: 'input[type="password"]'
     },
     commands: [{
         setTxtValue(selector, value) {
@@ -29,6 +27,11 @@ module.exports = {
         pressEnter() {
             return this
             .keys(client.Keys.ENTER)
+        },
+        NextBtn() {
+            return this
+                .click('@btnNext')
         }
+        
     }]
 };
