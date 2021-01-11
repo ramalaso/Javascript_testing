@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
     '@tags': ['login'],
     '@disabled': false,
@@ -5,8 +7,8 @@ module.exports = {
         const page = browser.page.LoginPage();
         page
             .navigate()
-            .setTxtValue('@txtUserName', 'osalamar@gmail.com')
-            .setTxtValue('@txtPassword', 'ramalaso')
+            .setTxtValue('@txtUserName', process.env.GOOGLE_USERNAME)
+            .setTxtValue('@txtPassword', process.env.GOOGLE_PASSWORD)
             .logIn();
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')
