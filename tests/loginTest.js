@@ -6,30 +6,30 @@ module.exports = {
         require('dotenv').config()
         page
             .navigate()
-            .setTxtValue('@txtUserName', process.env.GOOGLE_USERNAME)
-            .setTxtValue('@txtPassword', process.env.GOOGLE_PASSWORD)
+            .setTxtValue('@txtUserName', process.env.TRELLO_USERNAME)
+            .setTxtValue('@txtPassword', process.env.TRELLO_PASSWORD)
             .logIn();
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')
             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
             .saveScreenshot('tests_output/login.png')
     }}
-// module.exports = {
-//     '@tags': ['login'],
-//     '@disabled': false,
-//     'Log in into Trello with google account'(browser) {
-//         const page = browser.page.LoginPage();
-//         page
-//             .navigate()
-//             .googleBtn()
-//             .setTxtValue('@txtGoogleUserName', 'ramalaso45')
-//             .pressEnter()
-//             .setTxtValue('@txtGooglePassword', 'ramalaso')
-//             .pressEnter()
+module.exports = {
+    '@tags': ['login'],
+    '@disabled': false,
+    'Log in into Trello with google account'(browser) {
+        const page = browser.page.LoginPage();
+        page
+            .navigate()
+            .googleBtn()
+            .setTxtValue('@txtGoogleUserName', process.env.GOOGLE_USERNAME)
+            .pressEnter()
+            .setTxtValue('@txtGooglePassword', process.env.GOOGLE_PASSWORD)
+            .pressEnter()
 
-//         browser
-//             .assert.urlContains('boards', 'Verify that we are in home page url')
-//             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
-//             .saveScreenshot('tests_output/login.png');
-//     }
-// }
+        browser
+            .assert.urlContains('boards', 'Verify that we are in home page url')
+            .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
+            .saveScreenshot('tests_output/login.png');
+    }
+}
