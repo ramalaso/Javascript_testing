@@ -4,14 +4,16 @@ module.exports = {
     'Log in into Trello with google account'(browser) {
         const login = browser.page.LoginPage();
         const googleAuthenticationPage = browser.page.GoogleAuthenticationPage();
+        const googleAuthenticationPassword = browser.page.GoogleAuthenticationPassword();
         login
             .navigate()
             .googleBtn()
         googleAuthenticationPage
             .setTxtValue('@txtGoogleUserName', process.env.GOOGLE_USERNAME)
-            .pressEnter(browser)
+            browser.keys(browser.Keys.ENTER)
+        googleAuthenticationPassword
             .setTxtValue('@txtGooglePassword', process.env.GOOGLE_PASSWORD)
-            .pressEnter(browser)
+            browser.keys(browser.Keys.ENTER)
 
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')

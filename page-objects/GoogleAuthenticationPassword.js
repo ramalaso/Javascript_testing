@@ -1,7 +1,7 @@
 module.exports = {
     url: 'https://www.trello.com/login',
     elements: {
-        txtGoogleUserName: '#identifierId',
+        txtGooglePassword: '#password',
         btnNext: '.VfPpkd-RLmnJb'
     },
     commands: [{
