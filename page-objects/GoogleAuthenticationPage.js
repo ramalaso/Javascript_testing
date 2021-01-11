@@ -10,7 +10,7 @@ module.exports = {
             return this
                 .setValue(selector, value);
         },
-        pressEnter() {
+        pressEnter(client) {
             return this
             .keys(client.Keys.ENTER)
         },
