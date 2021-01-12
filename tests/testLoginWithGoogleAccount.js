@@ -7,11 +7,11 @@ module.exports = {
         const googleAuthenticationPassword = browser.page.GoogleAuthenticationPassword();
         login
             .navigate()
-            click(login, '@googleButton')
+            clickOption(login, '@btnGoogle')
             setTxtValue(googleAuthenticationPage, '@txtGoogleUserName', process.env.GOOGLE_USERNAME)
-            pressEnter(googleAuthenticationPage)
-            setTxtValue(googleAuthenticationPassword, '#password', process.env.GOOGLE_PASSWORD)
-            pressEnter(googleAuthenticationPassword)
+            pressEnter(browser)
+            setTxtValue(browser, 'input[type="password"]' , process.env.GOOGLE_PASSWORD)
+            pressEnter(browser)
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')
             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
