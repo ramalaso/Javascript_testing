@@ -9,7 +9,7 @@ module.exports = {
             .navigate()
             setTxtValue(page, '@txtUserName', process.env.TRELLO_USERNAME)
             setTxtValue(page, '@txtPassword', process.env.TRELLO_PASSWORD)
-            .logIn();
+            clickOption(page, '@btnLogin')
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')
             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
