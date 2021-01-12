@@ -1,6 +1,6 @@
 // const common = require('../utils/common')
 module.exports = {
-    '@tags': ['login1'],
+    '@tags': ['login'],
     '@disabled': false,
     'Log in into Trello with username and password'(browser) {
         const page = browser.page.LoginPage();

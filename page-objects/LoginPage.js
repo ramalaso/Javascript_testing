@@ -1,5 +1,3 @@
-const setTxtValue = require('../utils/common')
-
 module.exports = {
     url: 'https://www.trello.com/login',
     elements: {
