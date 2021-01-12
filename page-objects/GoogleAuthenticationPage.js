@@ -5,17 +5,5 @@ module.exports = {
         btnNext: '.VfPpkd-RLmnJb'
     },
     commands: [{
-        setTxtValue(selector, value) {
-            return this
-                .setValue(selector, value);
-        },
-        pressEnter(client) {
-            return client
-                .keys(client.Keys.ENTER)
-        },
-        NextBtn() {
-            return this
-                .click('@btnNext')
-        }
     }]
 };
