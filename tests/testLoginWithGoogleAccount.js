@@ -11,9 +11,8 @@ module.exports = {
         googleAuthenticationPage
             .setTxtValue('@txtGoogleUserName', process.env.GOOGLE_USERNAME)
             browser.keys(browser.Keys.ENTER)
-            .setValue('#password', process.env.GOOGLE_PASSWORD)
-            .keys(browser.Keys.ENTER)
-
+            browser.setValue('#password', process.env.GOOGLE_PASSWORD)
+            browser.keys(browser.Keys.ENTER)
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')
             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')

@@ -1,3 +1,5 @@
+const setTxtValue = require('../utils/common')
+
 module.exports = {
     url: 'https://www.trello.com/login',
     elements: {
@@ -7,10 +9,6 @@ module.exports = {
         btnGoogle: '#googleButton',
     },
     commands: [{
-        setTxtValue(selector, value) {
-            return this
-                .setValue(selector, value);
-        },
         logIn() {
             return this
                 .click('@btnLogin');
