@@ -10,11 +10,11 @@ module.exports = {
             clickOption(login, '@btnGoogle')
             setTxtValue(googleAuthenticationPage, '@txtGoogleUserName', process.env.GOOGLE_USERNAME)
             pressEnter(browser)
-            googleAuthenticationPassword
-                .waitForElementVisible('input[type="password"]')
-                setTxtValue(browser, 'input[type="password"]' , process.env.GOOGLE_PASSWORD)
-                pressEnter(browser)
-                .waitForElementVisible('input[type="search"]', 50000)
+        googleAuthenticationPassword
+            .waitForElementVisible('input[type="password"]')
+            setTxtValue(browser, 'input[type="password"]' , process.env.GOOGLE_PASSWORD)
+            pressEnter(browser)
+            .waitForElementVisible('input[type="search"]', 50000)
         browser
             .assert.urlContains('boards', 'Verify that we are in home page url')
             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
