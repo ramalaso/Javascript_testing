@@ -12,7 +12,7 @@ module.exports = {
             pressEnter(browser)
         googleAuthenticationPassword
             .waitForElementVisible('@txtGooglePassword')
-            setTxtValue(browser, '@txtGooglePassword' , process.env.GOOGLE_PASSWORD)
+            setTxtValue(googleAuthenticationPassword, '@txtGooglePassword' , process.env.GOOGLE_PASSWORD)
             pressEnter(browser)
             .waitForElementVisible('input[type="search"]', 50000)
         browser
