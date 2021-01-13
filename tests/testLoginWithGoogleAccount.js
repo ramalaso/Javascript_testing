@@ -11,8 +11,8 @@ module.exports = {
             setTxtValue(googleAuthenticationPage, '@txtGoogleUserName', process.env.GOOGLE_USERNAME)
             pressEnter(browser)
         googleAuthenticationPassword
-            .waitForElementVisible('input[type="password"]')
-            setTxtValue(browser, 'input[type="password"]' , process.env.GOOGLE_PASSWORD)
+            .waitForElementVisible('@txtGooglePassword')
+            setTxtValue(browser, '@txtGooglePassword' , process.env.GOOGLE_PASSWORD)
             pressEnter(browser)
             .waitForElementVisible('input[type="search"]', 50000)
         browser
