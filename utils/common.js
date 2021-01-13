@@ -5,7 +5,7 @@ module.exports = setTxtValue = (client, selector, value) => {
 
 module.exports = clickOption = (client, selector) => {
     return client
-            .click(selector);
+        .click(selector);
 }
 
 module.exports = pressEnter = (client) => {

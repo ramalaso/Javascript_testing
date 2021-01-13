@@ -14,4 +14,5 @@ module.exports = {
             .assert.urlContains('boards', 'Verify that we are in home page url')
             .assert.visible('._3qwe2tMMFonNvf', 'Verify that web navigator is at Home')
             .saveScreenshot('tests_output/login.png')
-    }}
+    }
+}
